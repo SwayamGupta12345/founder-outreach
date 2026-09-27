@@ -1,0 +1,22 @@
+{
+  "name": "Swayam Gupta",
+  "education": "B.Tech CSE",
+  "stage": "4th-year student",
+  "location": "India",
+
+  "general_preferences": {
+    "message_style": "short, natural, direct, human",
+    "avoid": [
+      "passionate",
+      "dream company",
+      "inspired by your journey",
+      "honored",
+      "I came across your profile",
+      "generic flattery",
+      "fake familiarity",
+      "exaggeration",
+      "AI-sounding language"
+    ],
+    "maximum_connection_message_characters": 280
+  }
+}

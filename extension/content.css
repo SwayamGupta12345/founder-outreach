@@ -1,0 +1,535 @@
+#foc-launcher {
+  position: fixed;
+  right: 24px;
+  bottom: 24px;
+
+  z-index: 2147483647;
+
+  border: none;
+  border-radius: 999px;
+
+  padding: 12px 18px;
+
+  background: #111827;
+  color: white;
+
+  font-family:
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    sans-serif;
+
+  font-size: 14px;
+  font-weight: 700;
+
+  cursor: pointer;
+
+  box-shadow:
+    0 8px 30px
+    rgba(0, 0, 0, 0.22);
+
+  transition:
+    transform 0.15s,
+    box-shadow 0.15s;
+}
+
+
+#foc-launcher:hover {
+  transform: translateY(-2px);
+
+  box-shadow:
+    0 12px 35px
+    rgba(0, 0, 0, 0.28);
+}
+
+
+#foc-panel {
+  position: fixed;
+
+  right: 24px;
+  bottom: 82px;
+
+  width: 460px;
+  max-height: 82vh;
+
+  overflow-y: auto;
+
+  z-index: 2147483647;
+
+  background: #ffffff;
+  color: #111827;
+
+  border:
+    1px solid #e5e7eb;
+
+  border-radius: 18px;
+
+  box-shadow:
+    0 25px 80px
+    rgba(0, 0, 0, 0.25);
+
+  font-family:
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    sans-serif;
+
+  font-size: 14px;
+}
+
+
+#foc-panel * {
+  box-sizing: border-box;
+}
+
+
+.foc-header {
+  position: sticky;
+  top: 0;
+
+  display: flex;
+
+  align-items: flex-start;
+  justify-content: space-between;
+
+  padding: 17px 18px;
+
+  background: white;
+
+  border-bottom:
+    1px solid #f0f0f0;
+
+  z-index: 2;
+}
+
+
+.foc-brand {
+  font-size: 16px;
+  font-weight: 750;
+}
+
+
+.foc-subtitle {
+  margin-top: 3px;
+
+  color: #6b7280;
+
+  font-size: 11px;
+}
+
+
+.foc-close {
+  border: none;
+
+  background: transparent;
+
+  color: #6b7280;
+
+  font-size: 24px;
+
+  line-height: 1;
+
+  cursor: pointer;
+}
+
+
+.foc-body {
+  padding: 18px;
+}
+
+
+.foc-label {
+  margin-bottom: 7px;
+
+  color: #6b7280;
+
+  font-size: 11px;
+  font-weight: 750;
+
+  text-transform: uppercase;
+
+  letter-spacing: 0.04em;
+}
+
+
+.foc-margin-top {
+  margin-top: 16px;
+}
+
+
+.foc-intent-grid {
+  display: grid;
+
+  grid-template-columns:
+    1fr 1fr;
+
+  gap: 8px;
+}
+
+
+.foc-intent {
+  min-height: 76px;
+
+  padding: 11px;
+
+  border:
+    1px solid #e5e7eb;
+
+  border-radius: 11px;
+
+  background: #fafafa;
+
+  color: #111827;
+
+  text-align: left;
+
+  cursor: pointer;
+
+  transition:
+    border 0.15s,
+    background 0.15s;
+}
+
+
+.foc-intent:hover {
+  border-color: #9ca3af;
+}
+
+
+.foc-intent.selected {
+  border:
+    2px solid #111827;
+
+  background: #f3f4f6;
+}
+
+
+.foc-intent-title {
+  font-weight: 700;
+}
+
+
+.foc-intent-description {
+  margin-top: 5px;
+
+  color: #6b7280;
+
+  font-size: 11px;
+
+  line-height: 1.35;
+}
+
+
+.foc-input {
+  width: 100%;
+
+  min-height: 78px;
+
+  padding: 10px;
+
+  border:
+    1px solid #d1d5db;
+
+  border-radius: 9px;
+
+  outline: none;
+
+  resize: vertical;
+
+  font-family: inherit;
+
+  font-size: 13px;
+
+  line-height: 1.4;
+}
+
+
+.foc-input:focus {
+  border-color: #6b7280;
+}
+
+
+.foc-select {
+  width: 100%;
+
+  padding: 10px;
+
+  border:
+    1px solid #d1d5db;
+
+  border-radius: 9px;
+
+  background: white;
+
+  font-family: inherit;
+}
+
+
+.foc-analyze {
+  width: 100%;
+
+  margin-top: 15px;
+
+  padding: 11px;
+
+  border: none;
+
+  border-radius: 10px;
+
+  background: #111827;
+
+  color: white;
+
+  font-weight: 750;
+
+  cursor: pointer;
+}
+
+
+.foc-analyze:disabled {
+  opacity: 0.6;
+
+  cursor: wait;
+}
+
+
+.foc-result {
+  margin-top: 18px;
+}
+
+
+.foc-result-top {
+  display: flex;
+
+  justify-content: space-between;
+
+  gap: 10px;
+
+  margin-bottom: 14px;
+}
+
+
+.foc-person {
+  font-size: 18px;
+  font-weight: 750;
+}
+
+
+.foc-role {
+  margin-top: 3px;
+
+  color: #6b7280;
+
+  font-size: 12px;
+}
+
+
+.foc-badge {
+  align-self: flex-start;
+
+  padding: 5px 9px;
+
+  border-radius: 999px;
+
+  background: #f3f4f6;
+
+  font-size: 11px;
+
+  font-weight: 750;
+
+  text-transform: uppercase;
+}
+
+
+.foc-card {
+  margin-bottom: 10px;
+
+  padding: 12px;
+
+  border:
+    1px solid #e5e7eb;
+
+  border-radius: 10px;
+
+  background: #fafafa;
+
+  line-height: 1.45;
+}
+
+
+.foc-card-title {
+  margin-bottom: 4px;
+
+  color: #6b7280;
+
+  font-size: 10px;
+
+  font-weight: 750;
+
+  text-transform: uppercase;
+}
+
+
+.foc-resume {
+  background: #f9fafb;
+}
+
+
+.foc-small {
+  margin-top: 5px;
+
+  color: #6b7280;
+
+  font-size: 12px;
+}
+
+
+.foc-section {
+  margin-top: 16px;
+}
+
+
+.foc-list {
+  margin: 5px 0 0;
+
+  padding-left: 20px;
+}
+
+
+.foc-list li {
+  margin-bottom: 5px;
+
+  line-height: 1.4;
+}
+
+
+.foc-message-section {
+  margin-top: 18px;
+}
+
+
+.foc-message {
+  width: 100%;
+
+  min-height: 100px;
+
+  padding: 11px;
+
+  border:
+    1px solid #d1d5db;
+
+  border-radius: 10px;
+
+  resize: vertical;
+
+  font-family: inherit;
+
+  font-size: 13px;
+
+  line-height: 1.45;
+}
+
+
+.foc-actions {
+  display: flex;
+
+  gap: 7px;
+
+  margin-top: 8px;
+}
+
+
+.foc-action {
+  padding: 8px 12px;
+
+  border:
+    1px solid #d1d5db;
+
+  border-radius: 8px;
+
+  background: white;
+
+  cursor: pointer;
+
+  font-weight: 650;
+}
+
+
+.foc-action.primary {
+  border-color: #111827;
+
+  background: #111827;
+
+  color: white;
+}
+
+
+.foc-confidence {
+  margin-top: 15px;
+
+  color: #9ca3af;
+
+  font-size: 11px;
+
+  text-align: right;
+}
+
+
+.foc-loading-box {
+  display: flex;
+
+  align-items: center;
+
+  gap: 10px;
+
+  padding: 15px;
+
+  border:
+    1px solid #e5e7eb;
+
+  border-radius: 10px;
+
+  background: #fafafa;
+
+  color: #6b7280;
+
+  line-height: 1.4;
+}
+
+
+.foc-spinner {
+  width: 18px;
+  height: 18px;
+
+  border:
+    2px solid #e5e7eb;
+
+  border-top-color: #111827;
+
+  border-radius: 50%;
+
+  animation:
+    foc-spin 0.7s linear infinite;
+}
+
+
+@keyframes foc-spin {
+
+  to {
+    transform: rotate(360deg);
+  }
+
+}
+
+
+.foc-error {
+  padding: 12px;
+
+  border-radius: 10px;
+
+  background: #fef2f2;
+
+  color: #991b1b;
+
+  line-height: 1.4;
+}
